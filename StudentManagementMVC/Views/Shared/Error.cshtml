@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Something went wrong!";
+}
+
+<h2 class="text-danger">Oops! An error occurred.</h2>
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <div class="alert alert-danger">
+        <strong>Error:</strong> @ViewBag.ErrorMessage
+    </div>
+}
+else
+{
+    <div class="alert alert-danger">
+        <strong>Error:</strong> Unexpected error occurred. Please try again later.
+    </div>
+}
+
+<p>
+    @Html.ActionLink("Go back to Home", "Index", "Students", new { area = "" }, new { @class = "btn btn-primary" })
+</p>

@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+}
+
+<h2>Welcome @ViewBag.Name 👋</h2>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+<a href="@Url.Action("Index", "Students")" class="btn btn-primary">← Back to Home</a>
+
+<p>This is your dashboard page. You can customize it as you like!</p>
